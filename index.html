@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kg-to-lb</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Weight Converter</h1>
+    <div id="box">
+        <input type="number" id="number">
+        <div id="button">
+            <button id="lb">convert to lb</button>
+            <button id="kg">convert to kg</button>
+        </div>
+        <div id="result"></div>
+    </div>
+    <script>
+        let number = document.querySelector('#number');
+        let lb = document.querySelector('#lb');
+        let kg =document.querySelector('#kg');
+        let result = document.querySelector('#result');
+        lb.addEventListener('click', () => {
+            let kgToLb = number.value;
+            result.innerText = Math.floor(kgToLb * 2.2) + ' lb';
+        })
+        kg.addEventListener('click', () => {
+            let lbToKg = number.value;
+            result.innerText = Math.floor(lbToKg / 2.2) + " kg";
+        })
+    </script>
+</body>
+</html>
